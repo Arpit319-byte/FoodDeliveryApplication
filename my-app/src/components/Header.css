@@ -1,0 +1,53 @@
+.header{
+
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1rem 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+
+
+}
+
+.nav-items>ul{
+  display: flex;
+  align-items: center;        /* Vertically center items */
+  justify-content: space-between; /* Evenly distribute items */
+  gap: 20px; 
+}
+
+.nav-items>ul>li{
+
+  /* padding: 10px; */
+  margin: 15px;
+  list-style-type: none;
+}
+.nav-items a {
+  color: white;           /* Default color */
+  text-decoration: none;  /* Remove underline */
+  transition: color 0.5s; /* Smooth color change */
+}
+
+.nav-items{
+  display: flex;
+}
+
+.nav-items a:hover {
+  color: #ff6b6b;        /* Hover color */
+}
+
+.cart-icon {
+  display: flex;              /* Make cart a flex container */
+  align-items: center;
+  margin: 15px;        /* Center cart content vertically */
+}
+
+.cart-icon:hover {
+  color: #ff6b6b;           /* Change to your preferred hover color */
+  cursor: pointer;           /* Show pointer cursor on hover */
+  transition: color 0.3s;    /* Smooth color transition */
+}
