@@ -133,8 +133,130 @@
   text-align: center;
   font-size: 1.1rem;
   color: #7f8c8d;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   font-weight: 300;
+}
+
+/* Filter Buttons */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  padding: 0 1rem;
+}
+
+.filter-buttons button {
+  padding: 0.8rem 1.5rem;
+  border: 2px solid #e0e0e0;
+  background: white;
+  color: #666;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  min-width: 140px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filter-buttons button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.5s;
+}
+
+.filter-buttons button:hover::before {
+  left: 100%;
+}
+
+.filter-buttons button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.filter-buttons button.active {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  border-color: #667eea;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.filter-buttons button.active:hover {
+  background: linear-gradient(45deg, #5a6fd8, #6a4190);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* Individual Button Styles */
+.top-rated-btn {
+  background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+  color: white;
+  border-color: #ff6b6b;
+}
+
+.top-rated-btn:hover {
+  background: linear-gradient(45deg, #ff5252, #ff7979);
+  border-color: #ff5252;
+  color: white;
+}
+
+.new-restaurants-btn {
+  background: linear-gradient(45deg, #4ecdc4, #44a08d);
+  color: white;
+  border-color: #4ecdc4;
+}
+
+.new-restaurants-btn:hover {
+  background: linear-gradient(45deg, #26a69a, #2e7d32);
+  border-color: #26a69a;
+  color: white;
+}
+
+.price-low-to-high-btn {
+  background: linear-gradient(45deg, #a8edea, #fed6e3);
+  color: #333;
+  border-color: #a8edea;
+}
+
+.price-low-to-high-btn:hover {
+  background: linear-gradient(45deg, #81ecec, #fab1a0);
+  border-color: #81ecec;
+  color: #333;
+}
+
+.price-high-to-low-btn {
+  background: linear-gradient(45deg, #ffecd2, #fcb69f);
+  color: #333;
+  border-color: #ffecd2;
+}
+
+.price-high-to-low-btn:hover {
+  background: linear-gradient(45deg, #ffeaa7, #fab1a0);
+  border-color: #ffeaa7;
+  color: #333;
+}
+
+.all-restaurants-btn {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  border-color: #667eea;
+}
+
+.all-restaurants-btn:hover {
+  background: linear-gradient(45deg, #5a6fd8, #6a4190);
+  border-color: #5a6fd8;
+  color: white;
 }
 
 .restaurants-grid {
@@ -171,5 +293,30 @@
   
   .restaurants h2 {
     font-size: 2.2rem;
+  }
+  
+  .filter-buttons {
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+  }
+  
+  .filter-buttons button {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.85rem;
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  
+  .filter-buttons button {
+    width: 100%;
+    max-width: 250px;
+    min-width: auto;
   }
 }

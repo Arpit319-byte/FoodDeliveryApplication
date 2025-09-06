@@ -21,9 +21,6 @@ const Header=()=>{
            🛒 <span className="cart-count">Cart</span>
       </div>
       </div>
-
-     
-
     </div>
   );
 }

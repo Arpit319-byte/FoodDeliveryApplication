@@ -1,33 +1,6 @@
 import React from 'react';
 import './RestaurantCard.css';
-
-// const RestaurantCard = ({ restaurant }) => {
-//   const { name, cuisine, rating, deliveryTime, minOrder, image } = restaurant;
-  
-//   return (
-//     <div className="restaurant-card">
-//       <div className="restaurant-image">
-//         <img src={image} alt={name} />
-//         <div className="rating-badge">
-//           ⭐ {rating}
-//         </div>
-//       </div>
-//       <div className="restaurant-info">
-//         <h3>{name}</h3>
-//         <p className="cuisine">{cuisine}</p>
-//         <div className="restaurant-details">
-//           <span>🕒 {deliveryTime} min</span>
-//           <span>💰 Min ₹{minOrder}</span>
-//         </div>
-//         <button className="view-menu-btn">View Menu</button>
-//       </div>
-//     </div>
-//   );
-// };
-
-
-
-
+import RESTAURANT_LOGO from '../utils/constant';
 
 const RestaurantCard=(props)=>{
   const {restaurant} = props;
@@ -41,7 +14,7 @@ const RestaurantCard=(props)=>{
     <div className='restaurant-card'>
        <img 
        className='restaurant-image' 
-       src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+restaurant.info.cloudinaryImageId}
+       src={RESTAURANT_LOGO+restaurant.info.cloudinaryImageId}
         alt="restaurant-image" />
       
       {/* Rating Badge */}

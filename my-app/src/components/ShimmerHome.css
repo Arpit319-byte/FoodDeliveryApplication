@@ -1,0 +1,202 @@
+.shimmer-home {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+/* Hero Section Shimmer */
+.shimmer-hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 80px 20px;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  animation: shimmer-slide 3s infinite;
+}
+
+.shimmer-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.shimmer-hero-title {
+  width: 60%;
+  height: 48px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.3) 25%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0.3) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+  border-radius: 8px;
+  margin: 0 auto 20px;
+}
+
+.shimmer-hero-subtitle {
+  width: 80%;
+  height: 24px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.2) 25%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.2) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+  border-radius: 6px;
+  margin: 0 auto 40px;
+}
+
+.shimmer-search-bar {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+  gap: 12px;
+  align-items: center;
+}
+
+.shimmer-search-input {
+  flex: 1;
+  height: 50px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.2) 25%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.2) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+  border-radius: 25px;
+}
+
+.shimmer-search-btn {
+  width: 120px;
+  height: 50px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.3) 25%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0.3) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+  border-radius: 25px;
+}
+
+/* Restaurants Section Shimmer */
+.shimmer-restaurants {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.shimmer-section-title {
+  width: 40%;
+  height: 32px;
+  background: linear-gradient(90deg, #e0e0e0 25%, #d0d0d0 50%, #e0e0e0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.shimmer-section-subtitle {
+  width: 60%;
+  height: 20px;
+  background: linear-gradient(90deg, #e0e0e0 25%, #d0d0d0 50%, #e0e0e0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+  border-radius: 4px;
+  margin-bottom: 40px;
+}
+
+/* Filter Buttons Shimmer */
+.shimmer-filter-buttons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.shimmer-filter-btn {
+  width: 140px;
+  height: 40px;
+  background: linear-gradient(90deg, #e0e0e0 25%, #d0d0d0 50%, #e0e0e0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+  border-radius: 20px;
+}
+
+/* Restaurant Grid Shimmer */
+.shimmer-restaurants-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Animations */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes shimmer-slide {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .shimmer-hero {
+    padding: 60px 15px;
+  }
+  
+  .shimmer-hero-title {
+    height: 36px;
+  }
+  
+  .shimmer-hero-subtitle {
+    height: 20px;
+  }
+  
+  .shimmer-search-bar {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .shimmer-search-input,
+  .shimmer-search-btn {
+    width: 100%;
+  }
+  
+  .shimmer-restaurants {
+    padding: 40px 15px;
+  }
+  
+  .shimmer-restaurants-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 15px;
+  }
+  
+  .shimmer-filter-buttons {
+    gap: 8px;
+  }
+  
+  .shimmer-filter-btn {
+    width: 120px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .shimmer-restaurants-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .shimmer-filter-buttons {
+    justify-content: center;
+  }
+}
