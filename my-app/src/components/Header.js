@@ -1,25 +1,24 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Header.css';
 
-const Header=()=>{
-  return(
-     
+const Header = () => {
+  return (
     <div className="header">
-
       <div className="logo-container">
+        <Link to="/">
           <h1>🍕 FoodExpress</h1>
+        </Link>
       </div>
 
       <div className='nav-items'>
         <ul>
-          <li><a href="#Home">Home</a></li>
-          <li><a href="#Resturant">Resturant</a></li>
-          <li><a href="#Order">Order</a></li>
-          <li><a href="Profile">Profile</a></li>
+          <li><Link to="/">Home</Link></li>
+          <li><a href="#profile">Profile</a></li>
         </ul>
         <div className="cart-icon">
-           🛒 <span className="cart-count">Cart</span>
-      </div>
+          🛒 <span className="cart-count">Cart</span>
+        </div>
       </div>
     </div>
   );
